@@ -27,7 +27,7 @@ class Kount_Util_Khash {
    * @param string $salt - salt phrase set when user instantiates a RIS request.
    * @return string Salt phrase used for hashing in hash function
    */
-  public function setSaltPhrase($salt) {
+  public static function setSaltPhrase($salt) {
     self::$salt = $salt;
   }
 
