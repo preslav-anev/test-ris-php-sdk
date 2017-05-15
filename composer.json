@@ -1,0 +1,15 @@
+{
+  "name": "Kount/php-sdk",
+  "description": "Kount's PHP SDK",
+  "keywords": ["kount", "payments", "sdk"],
+  "homepage": "https://bitbucket.org/panatonkount/sdkphp",
+  "require": {
+    "php": ">=5.5",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.8",
+    "phpdocumentor/phpdocumentor": "2.*"
+  }
+}
