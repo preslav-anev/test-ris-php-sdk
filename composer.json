@@ -1,8 +1,15 @@
 {
-  "name": "Kount/php-sdk",
-  "description": "Kount's PHP SDK",
+  "name": "kount/kount-ris-php-sdk",
+  "description": "PHP client for Kount Risk Inquiry Service",
   "keywords": ["kount", "payments", "sdk"],
-  "homepage": "https://bitbucket.org/panatonkount/sdkphp",
+  "homepage": "https://github.com/preslav-anev/test-ris-php-sdk",
+  "type" : "library",
+  "license": "MIT",
+  "authors": [{
+    "name": "Kount",
+    "homepage": "Link to page with contributors.",
+    "email": "Email here. Optional."
+  }],
   "require": {
     "php": ">=5.5",
     "ext-curl": "*",
