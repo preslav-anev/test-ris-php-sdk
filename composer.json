@@ -6,9 +6,7 @@
   "type" : "library",
   "license": "MIT",
   "authors": [{
-    "name": "Kount",
-    "homepage": "Link to page with contributors.",
-    "email": "Email here. Optional."
+    "name": "Kount"
   }],
   "require": {
     "php": ">=5.5",
