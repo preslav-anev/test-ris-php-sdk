@@ -7,7 +7,7 @@
   "license": "MIT",
   "authors": [{
     "name": "Kount",
-    "email": "koun@example.com",
+    "email": "kount@example.com",
     "homepage": "http://kount.example.com"
   }],
   "require": {
