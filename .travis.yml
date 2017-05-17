@@ -9,6 +9,7 @@ script:
   - vendor/bin/phpdoc
 after_script:
   - git status
+  - git branch
   - git config --global user.email "preslav.anev@sirma.bg"
   - git config --global user.name "preslav-anev"
   - export GIT_TAG=$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER
