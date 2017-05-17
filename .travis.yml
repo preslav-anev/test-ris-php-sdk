@@ -14,7 +14,7 @@ after_script:
   - export GIT_TAG=0.1.$TRAVIS_BUILD_NUMBER
   - echo $GIT_TAG
   - git tag -a $GIT_TAG -m 'Version $VERS'
-  - git push https://username:PERSONAL_ACCESS_TOKEN@github.com/preslav-anev/test-ris-php-sdk.git/ --tags
+  - git push https://preslav-anev:PERSONAL_ACCESS_TOKEN@github.com/preslav-anev/test-ris-php-sdk.git/ --tags
 notifications:
   email:
     recipients:
