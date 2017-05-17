@@ -14,7 +14,12 @@ after_script:
   - echo $GIT_TAG
   - git tag -a $GIT_TAG -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
   - git push orgin $GIT_TAG
+  - git push --quiet https://github.com/preslav-anev/test-ris-php-sdk $GIT_TAG
 notifications:
   email:
     recipients:
       - preslavanev@abv.bg
+
+branches:
+  except:
+    - /^build-[0-9a-z\-]*/
