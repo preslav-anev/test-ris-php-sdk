@@ -12,8 +12,8 @@ after_script:
   - git config --global user.name "preslav-anev"
   - export GIT_TAG=$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER
   - echo $GIT_TAG
-  - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
-  - git push --tags
+  - git tag -a $GIT_TAG -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
+  - git push orgin $GIT_TAG
 notifications:
   email:
     recipients:
