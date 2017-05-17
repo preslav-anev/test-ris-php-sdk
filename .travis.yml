@@ -10,6 +10,7 @@ script:
 after_script:
   - git config --global user.email "preslav.anev@sirma.bg"
   - git config --global user.name "preslav-anev"
+  - git config --global github.token 3ba382b7fea00131df6f619834ff2be7d5c12979
   - git config --global credential.helper cache
   - export GIT_TAG=0.1.$TRAVIS_BUILD_NUMBER
   - echo $GIT_TAG
