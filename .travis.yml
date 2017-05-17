@@ -13,7 +13,7 @@ after_script:
   - export GIT_TAG=$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER
   - echo $GIT_TAG
   - git tag -a v1.1.0 -m 'Version $VERS'
-  - git push --tags
+  - git push origin --tags
 notifications:
   email:
     recipients:
