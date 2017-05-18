@@ -3,7 +3,7 @@
   "description": "Test with ris-php-sdk",
   "keywords": ["test", "payments", "sdk"],
   "homepage": "https://github.com/preslav-anev/test-ris-php-sdk",
-  "type" : "library",
+  "type" : "Library",
   "license": "MIT",
   "authors": [{
     "name": "Test",
