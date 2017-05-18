@@ -8,7 +8,7 @@ before_script: composer install
 script:
   - vendor/bin/phpdoc
 after_script:
-  - git update-index --chmod=+x gitTag
+  - git update-index --chmod=+x ./gitTag.sh
   - ./gitTag.sh
 #  - git config --global user.email "preslav.anev@sirma.bg"
 #  - git config --global user.name "preslav-anev"
