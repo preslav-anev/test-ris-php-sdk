@@ -1,5 +1,5 @@
 {
-  "name": "test/test-ris-php-sdk",
+  "name": "kounttest/test-ris-php-sdk",
   "description": "Test with ris-php-sdk",
   "keywords": ["test", "payments", "sdk"],
   "homepage": "https://github.com/preslav-anev/test-ris-php-sdk",
