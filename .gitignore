@@ -13,4 +13,13 @@ composer.phar
 #phpDocs will remove from ignore once I am done with tests
 docs
 phpdocs
+src
+tests
+phpdoc.dist.xml
+phpunit.integration.xml
+phpunit.xml
+README
+README.md
+release.sh
+CHANGELOG
 
