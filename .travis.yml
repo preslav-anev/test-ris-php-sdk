@@ -8,13 +8,14 @@ before_script: composer install
 script:
   - vendor/bin/phpdoc
 after_script:
-  - git config --global user.email "preslav.anev@sirma.bg"
-  - git config --global user.name "preslav-anev"
-  - git config --global credential.helper cache
-  - export GIT_TAG=0.1.$TRAVIS_BUILD_NUMBER
-  - echo $GIT_TAG
-  - git tag -a $GIT_TAG -m 'Version $VERS'
-  - git push --tags
+  - .travis/gitTag.sh
+#  - git config --global user.email "preslav.anev@sirma.bg"
+#  - git config --global user.name "preslav-anev"
+#  - git config --global credential.helper cache
+#  - export GIT_TAG=0.1.$TRAVIS_BUILD_NUMBER
+#  - echo $GIT_TAG
+#  - git tag -a $GIT_TAG -m 'Version $VERS'
+#  - git push --tags
 notifications:
   email:
     recipients:
