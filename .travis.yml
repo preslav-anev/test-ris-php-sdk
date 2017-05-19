@@ -14,7 +14,7 @@ after_script:
   - export GIT_TAG=0.1.$TRAVIS_BUILD_NUMBER
   - echo $GIT_TAG
   - git tag -a $GIT_TAG -m 'Version $GIT_TAG'
-  - git push --quiet https://$GH_TOKEN@github.com/preslav-anev/test-ris-php-sdk.git --tags > /dev/null 2>&1
+  - git push --quiet https://$GH_TOKEN@github.com/preslav-anev/test-ris-php-sdk.git $GIT_TAG > /dev/null 2>&1
 notifications:
   email:
     recipients:
@@ -22,4 +22,4 @@ notifications:
 
 branches:
   except:
-    - /build-.+-\d{4}-\d{2}-\d{2}-.*/
+    - /^build-[0-9a-z\-]*/
