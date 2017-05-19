@@ -22,7 +22,7 @@ deploy:
     file: "File to upload"
     skip_cleanup: true
     on:
-      tags: true
+      tags: false
 notifications:
   email:
     recipients:
