@@ -7,7 +7,7 @@ php:
 before_script: composer install
 script:
   - vendor/bin/phpdoc
-before_deploy:
+after_script:
    - ./gitTag.sh
 #  - if [ -n "$GH_TOKEN" ]; then echo $GH_TOKEN; fi;
 #  - git config --global user.email "builds@travis-ci.com"
