@@ -16,9 +16,9 @@ after_script:
   - git config --global user.name "Travis CI"
   - export GIT_TAG=0.1.$TRAVIS_BUILD_NUMBER
   - export GIT_TAGG=ini_get('SDK_VERSION')
-  - echo $GIT_TAG
-  - git tag -a $GIT_TAG -m 'Version $GIT_TAG'
-  - git push --quiet https://$GH_TOKEN@github.com/preslav-anev/test-ris-php-sdk.git $GIT_TAG > /dev/null 2>&1
+  - echo $GIT_TAGG
+  - git tag -a $GIT_TAGG -m 'Version $GIT_TAGG'
+  - git push --quiet https://$GH_TOKEN@github.com/preslav-anev/test-ris-php-sdk.git $GIT_TAGG > /dev/null 2>&1
 notifications:
   email:
     recipients:
