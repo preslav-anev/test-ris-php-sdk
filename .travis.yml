@@ -6,7 +6,7 @@ php:
   - 7.0
   - 7.1
 before_script:
-  - composer self-update --snapshot
+  - composer install
 script:
   #- vendor/bin/phpdoc
 after_script:
