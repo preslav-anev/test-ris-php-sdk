@@ -27,7 +27,7 @@ deploy:
   file: "Kount-Ris-PHP-SDK"
   skip_cleanup: true
   on:
-    tags: true
+    branch: master
 notifications:
   email:
     recipients:
