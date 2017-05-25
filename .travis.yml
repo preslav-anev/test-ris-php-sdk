@@ -29,10 +29,7 @@ deploy:
   file: "Kount-Ris-PHP-SDK"
   skip_cleanup: true
   on:
-    all_branches: true
     tags: true
-
-after_deploy:
 notifications:
   email:
     recipients:
