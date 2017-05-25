@@ -25,7 +25,7 @@ branches:
 deploy:
   provider: releases
   api_key: $GH_TOKEN
-  file: Kount-Ris-PHP-SDK.zip
+  file: Sdk-Ris-Php-6.5.8.zip
   skip_cleanup: true
   on:
     branch: master
