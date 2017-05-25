@@ -9,7 +9,7 @@ before_script:
   - composer install
 script:
   - vendor/bin/phpdoc -d src/ -t phpdocs/
-  - zip -r "Sdk-Ris-Php-6.5.7.zip" . -x vendor/\* -x build/\* -x phpdocs/\* -x .git/\* sdkphp/
+  #- zip -r "Sdk-Ris-Php-6.5.7.zip" . -x vendor/\* -x build/\* -x phpdocs/\* -x .git/\* sdkphp/
 after_script:
   - if [ -n "$GH_TOKEN" ]; then $GH_TOKEN; fi;
   - git config --global user.email "builds@travis-ci.com"
@@ -22,13 +22,13 @@ branches:
   except:
     - /^[0-9].*/
 
-deploy:
-  provider: releases
-  api_key: $GH_TOKEN
-  file: Sdk-Ris-Php-6.5.8.zip
-  skip_cleanup: true
-  on:
-    branch: master
+#deploy:
+#  provider: releases
+#  api_key: $GH_TOKEN
+#  file: Sdk-Ris-Php-6.5.8.zip
+#  skip_cleanup: true
+#  on:
+#    branch: master
 notifications:
   email:
     recipients:
