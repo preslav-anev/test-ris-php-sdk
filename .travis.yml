@@ -8,7 +8,7 @@ php:
 before_script:
   - composer install
 script:
-  - vendor/bin/phpdoc
+  - phpdoc
 after_script:
   - if [ -n "$GH_TOKEN" ]; then $GH_TOKEN; fi;
   - git config --global user.email "builds@travis-ci.com"
