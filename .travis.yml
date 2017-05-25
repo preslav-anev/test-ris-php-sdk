@@ -10,8 +10,6 @@ before_script:
 script:
   - vendor/bin/phpdoc -d src/ -t phpdocs/
 after_script:
-
-before_deploy:
   - if [ -n "$GH_TOKEN" ]; then $GH_TOKEN; fi;
   - git config --global user.email "builds@travis-ci.com"
   - git config --global user.name "Travis CI"
