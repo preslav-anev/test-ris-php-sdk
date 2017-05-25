@@ -10,13 +10,6 @@ before_script:
 script:
   - vendor/bin/phpdoc -d src/ -t phpdocs/
 after_script:
-  - if [ -n "$GH_TOKEN" ]; then $GH_TOKEN; fi;
-  - git config --global user.email "builds@travis-ci.com"
-  - git config --global user.name "Travis CI"
-  - export GIT_TAGG=$(awk -F "=" '/SDK_VERSION/ {print $2}' src/settings.ini)
-  - echo $GIT_TAGG
-  - git tag -a $GIT_TAGG -m 'Version for git tag.'
-  - git push --quiet https://$GH_TOKEN@github.com/preslav-anev/test-ris-php-sdk.git $GIT_TAGG > /dev/null 2>&1
 deploy:
   provider: releases
   api_key: $GH_TOKEN
@@ -25,6 +18,15 @@ deploy:
   on:
     all_branches: true
     tags: true
+
+after_deploy:
+  - if [ -n "$GH_TOKEN" ]; then $GH_TOKEN; fi;
+    - git config --global user.email "builds@travis-ci.com"
+    - git config --global user.name "Travis CI"
+    - export GIT_TAGG=$(awk -F "=" '/SDK_VERSION/ {print $2}' src/settings.ini)
+    - echo $GIT_TAGG
+    - git tag -a $GIT_TAGG -m 'Version for git tag.'
+    - git push --quiet https://$GH_TOKEN@github.com/preslav-anev/test-ris-php-sdk.git $GIT_TAGG > /dev/null 2>&1
 notifications:
   email:
     recipients:
