@@ -10,6 +10,7 @@ before_script:
   -
 script:
   - vendor/bin/phpdoc -d src/ -t phpdocs/
+  #- git update-index --chmod=+x release.sh
   - ./release.sh
 after_script:
   - if [ -n "$GH_TOKEN" ]; then $GH_TOKEN; fi;
@@ -22,6 +23,8 @@ after_script:
 branches:
   except:
     - /^[0-9].*/
+  only:
+    - master
 deploy:
   provider: releases
   api_key: $GH_TOKEN
@@ -29,6 +32,7 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
+    tags: true
 notifications:
   email:
     recipients:
