@@ -19,7 +19,7 @@ after_script:
   - export GIT_TAGG=$(awk -F "=" '/SDK_VERSION/ {print $2}' src/settings.ini)
   - echo $GIT_TAGG
   - git tag -a $GIT_TAGG -m 'Version for git tag.'
-  - git push origin master --tags > /dev/null 2>&1
+  - git push origin master $GIT_TAGG > /dev/null 2>&1
 branches:
   except:
     - /^[0-9].*/
