@@ -19,6 +19,6 @@ phpunit.integration.xml
 phpunit.xml
 README
 README.md
-release.sh
+#release.sh
 CHANGELOG
 
