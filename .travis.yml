@@ -23,7 +23,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key: $GH_TOKEN
-  file: Sdk-Ris-Php-$GIT_TAG.zip
+  file: Sdk-Ris-Php-$GIT_TAG-$TIMESTAMP.zip
   skip_cleanup: true
   on:
     tags: false
