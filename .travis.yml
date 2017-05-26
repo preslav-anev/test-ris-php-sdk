@@ -18,9 +18,6 @@ before_deploy:
   - echo $GIT_TAGG
   - git tag -a $GIT_TAGG -m 'Version for git tag.'
   - git push --quiet https://$GH_TOKEN@github.com/preslav-anev/test-ris-php-sdk.git --tags > /dev/null 2>&1
-#branches:
-#  except:
-#    - /^[0-9].*/
 deploy:
   provider: releases
   api_key: $GH_TOKEN
