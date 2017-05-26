@@ -9,7 +9,7 @@ before_script:
   - composer install
 script:
   - vendor/bin/phpdoc -d src/ -t phpdocs/
-  - release.sh
+  - ./release.sh
 after_script:
   - if [ -n "$GH_TOKEN" ]; then $GH_TOKEN; fi;
   - git config --global user.email "builds@travis-ci.com"
