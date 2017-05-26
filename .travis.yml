@@ -28,8 +28,6 @@ deploy:
   api_key: $GH_TOKEN
   file: Sdk-Ris-Php.zip
   skip_cleanup: true
-  on:
-    tags: true
 notifications:
   email:
     recipients:
