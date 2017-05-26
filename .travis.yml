@@ -30,3 +30,7 @@ notifications:
     recipients:
       - preslavanev@abv.bg
 
+branches:
+  only:
+  - master
+
