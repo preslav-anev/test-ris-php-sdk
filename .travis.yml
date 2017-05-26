@@ -20,11 +20,6 @@ after_script:
   - echo $GIT_TAGG
   - git tag -a $GIT_TAGG -m 'Version for git tag.'
   - git push --quiet https://$GH_TOKEN@github.com/preslav-anev/test-ris-php-sdk.git $GIT_TAGG > /dev/null 2>&1
-branches:
-  except:
-    - /^[0-9].*/
-#  only:
-#    - master
 deploy:
   provider: releases
   api_key: $GH_TOKEN
@@ -37,3 +32,9 @@ notifications:
   email:
     recipients:
       - preslavanev@abv.bg
+
+branches:
+  except:
+    - /^[0-9].*/
+#  only:
+#    - master
