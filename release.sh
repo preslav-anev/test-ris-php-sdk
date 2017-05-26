@@ -25,7 +25,7 @@ TIMESTAMP=$(timestamp)
 # Generating the .zip archive deliverable with a timestamp and a version number in the root directory of the project.
 # Note : If you are running a Windows operating system you have to install .zip package to git bash(assuming that is what you are using for running this script)
 # You can do that via GoW : https://github.com/bmatzelle/gow/wiki . Here you can find a description of GoW and detailed guide on how to add packages to your git bash console.
-zip -r "Sdk-Ris-Php-$VERS-$TIMESTAMP.zip" . -x vendor/\* -x build/\* $FOLDER
+zip -r "Sdk-Ris-Php.zip" . -x vendor/\* -x build/\* -x phpdocs/\* $FOLDER
 
 if [ $? -ne 0 ]
 then

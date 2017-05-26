@@ -22,14 +22,13 @@ after_script:
 branches:
   except:
     - /^[0-9].*/
-
-#deploy:
-#  provider: releases
-#  api_key: $GH_TOKEN
-#  file: Sdk-Ris-Php-6.5.8.zip
-#  skip_cleanup: true
-#  on:
-#    branch: master
+deploy:
+  provider: releases
+  api_key: $GH_TOKEN
+  file: Sdk-Ris-Php.zip
+  skip_cleanup: true
+  on:
+    branch: master
 notifications:
   email:
     recipients:
