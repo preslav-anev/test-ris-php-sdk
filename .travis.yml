@@ -29,8 +29,7 @@ deploy:
   file: Sdk-Ris-Php.zip
   skip_cleanup: true
   on:
-    branch: master
-#    tags: true
+    tags: true
 notifications:
   email:
     recipients:
