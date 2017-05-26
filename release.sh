@@ -15,9 +15,6 @@ FOLDER='sdkphp/'
 # Version number taken from src/settings.ini configuration file.
 VERS=$(awk -F "=" '/SDK_VERSION/ {print $2}' src/settings.ini)
 
-# Branch variable containing current branch. Must be the current release branch.
-branch=$(git symbolic-ref --short HEAD)
-
 # Function generating timestamp for the .zip archive name.
 timestamp() {
   date +"%Y%m%d%H%M%S"
