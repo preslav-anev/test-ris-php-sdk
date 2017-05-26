@@ -23,8 +23,8 @@ after_script:
 branches:
   except:
     - /^[0-9].*/
-  only:
-    - master
+#  only:
+#    - master
 deploy:
   provider: releases
   api_key: $GH_TOKEN
