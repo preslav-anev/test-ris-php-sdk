@@ -12,7 +12,7 @@ script:
   - vendor/bin/phpdoc -d src/ -t phpdocs/
   #- git update-index --chmod=+x release.sh
   - ./release.sh
-before_deploy:
+after_script:
   - if [ -n "$GH_TOKEN" ]; then $GH_TOKEN; fi;
   - git config --global user.email "builds@travis-ci.com"
   - git config --global user.name "Travis CI"
@@ -20,6 +20,9 @@ before_deploy:
   - echo $GIT_TAGG
   - git tag -a $GIT_TAGG -m 'Version for git tag.'
   - git push --quiet https://$GH_TOKEN@github.com/preslav-anev/test-ris-php-sdk.git $GIT_TAGG > /dev/null 2>&1
+branches:
+  except:
+    - /^[0-9].*/
 deploy:
   provider: releases
   api_key: $GH_TOKEN
@@ -33,8 +36,6 @@ notifications:
     recipients:
       - preslavanev@abv.bg
 
-branches:
-  except:
-    - /^[0-9].*/
+
 #  only:
 #    - master
