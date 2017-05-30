@@ -9,7 +9,6 @@ before_script:
   - composer install
 script:
   - export BRANCH=$TRAVIS_BRANCH
-  - echo $BRANCH
   - if [ ${BRANCH} != "master" ]; then
       exit 0;
     fi
