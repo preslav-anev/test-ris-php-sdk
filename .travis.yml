@@ -34,8 +34,8 @@ notifications:
       - preslavanev@abv.bg
 
 # safelist
-branches:
-  only:
-  - master
+#branches:
+#  only:
+#  - master
 
 
