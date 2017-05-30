@@ -25,7 +25,7 @@ deploy:
   skip_cleanup: true
   on:
     tags: false
-    branches: master
+    all_branches: true
 notifications:
   email:
     recipients:
