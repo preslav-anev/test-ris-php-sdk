@@ -16,7 +16,7 @@ before_deploy:
   - export GIT_TAG=$(awk -F "=" '/SDK_VERSION/ {print $2}' src/settings.ini)
   - export TIMESTAMP=$(date +"%Y%m%d%H%M%S")
   - echo $GIT_TAG
-  - git tag -a $GIT_TAG -m "Version for git tag $GIT_TAG."
+  - git tag -a $GIT_TAG -m "Release tag - $GIT_TAG."
   - git push --quiet https://$GH_TOKEN@github.com/preslav-anev/test-ris-php-sdk.git --tags > /dev/null 2>&1
 deploy:
   provider: releases
@@ -30,5 +30,10 @@ notifications:
   email:
     recipients:
       - preslavanev@abv.bg
+
+# safelist
+branches:
+  only:
+  - master
 
 
