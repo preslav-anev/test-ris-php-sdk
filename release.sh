@@ -1,13 +1,6 @@
 #!/bin/bash
 
-# The purpose of this bash script is to generate a release version and a .zip archive for PHP SDK.
-# Make sure you have created a release branch with the latest changes committed and pushed, ready for merging to master.
-# You must specify the release version number in the src/settings.ini file as a value of the 'VERSION_NUMBER' variable.
-# In order for this script to run successfully you must have performed these several steps:
-#
-#  - install composer on your machine and add composer.json to the root of the project.
-#  - add phpunit and phpDocumentor to composer.json, preferably in 'require-dev' section.
-#  - create release branch for latest release changes following the following naming convention: 'release/(version number)'.
+# The purpose of this bash script is to generate a .zip archive for PHP SDK.
 
 # Target folder for the .zip archive.
 FOLDER='sdkphp/'
