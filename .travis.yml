@@ -9,10 +9,10 @@ before_script:
   - composer install
 script:
   - vendor/bin/phpdoc -d src/ -t phpdocs/
-  - ./release.sh
-before_deploy:
   - export BRANCH=$TRAVIS_BRANCH
   - echo $BRANCH
+  - ./release.sh
+before_deploy:
   - git config --global user.email "builds@travis-ci.com"
   - git config --global user.name "Travis CI"
   - export GIT_TAG=$(awk -F "=" '/SDK_VERSION/ {print $2}' src/settings.ini)
