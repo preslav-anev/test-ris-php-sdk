@@ -31,9 +31,9 @@ notifications:
     recipients:
       - preslavanev@abv.bg
 
-# safelist
-branches:
-  only:
-  - master
+## safelist
+#branches:
+#  only:
+#  - master
 
 
