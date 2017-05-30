@@ -9,13 +9,19 @@ before_script:
   - composer install
 script:
   - vendor/bin/phpdoc -d src/ -t phpdocs/
+  - export BRANCH=$TRAVIS_BRANCH
+  - echo $BRANCH
+  - if [ ${BRANCH} != "master" ]; then
+      exit 0;
+    fi
   - ./release.sh
 before_deploy:
   - git config --global user.email "builds@travis-ci.com"
   - git config --global user.name "Travis CI"
   - export GIT_TAG=$(awk -F "=" '/SDK_VERSION/ {print $2}' src/settings.ini)
   - export TIMESTAMP=$(date +"%Y%m%d%H%M%S")
-  - git tag -a $GIT_TAG -m "Version for git tag $GIT_TAG."
+  - echo $GIT_TAG
+  - git tag -a $GIT_TAG -m "Release tag - $GIT_TAG."
   - git push --quiet https://$GH_TOKEN@github.com/preslav-anev/test-ris-php-sdk.git --tags > /dev/null 2>&1
 deploy:
   provider: releases
@@ -24,8 +30,7 @@ deploy:
   skip_cleanup: true
   on:
     tags: false
-    branch: master
-
+    all_branches: true
 notifications:
   email:
     recipients:
