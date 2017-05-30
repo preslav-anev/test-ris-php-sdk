@@ -8,12 +8,12 @@ php:
 before_script:
   - composer install
 script:
-  - vendor/bin/phpdoc -d src/ -t phpdocs/
   - export BRANCH=$TRAVIS_BRANCH
   - echo $BRANCH
   - if [ ${BRANCH} != "master" ]; then
       exit 0;
     fi
+  - vendor/bin/phpdoc -d src/ -t phpdocs/
   - ./release.sh
 before_deploy:
   - git config --global user.email "builds@travis-ci.com"
