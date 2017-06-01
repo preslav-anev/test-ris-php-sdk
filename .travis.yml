@@ -21,7 +21,7 @@ before_deploy:
   - export TIMESTAMP=$(date +"%Y%m%d%H%M%S")
   - echo $GIT_TAG
   - git tag -a $GIT_TAG -m "Release tag - $GIT_TAG."
-  - git push origin $GIT_TAG
+  - git push https://$GH_TOKEN@github.com/preslav-anev/test-ris-php-sdk.git $GIT_TAG
 deploy:
   provider: releases
   api_key: $GH_TOKEN
