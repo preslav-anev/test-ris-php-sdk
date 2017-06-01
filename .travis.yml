@@ -1,19 +1,17 @@
 sudo: false
 language: php
 php:
-#  - 5.5
-#  - 5.6
-#  - 7.0
+  - 5.5
+  - 5.6
+  - 7.0
   - 7.1
 before_script:
   - composer install
 script:
   - export BRANCH=$TRAVIS_BRANCH
-  - echo $BRANCH
-  - echo ${BRANCH}
-  - if [ ${BRANCH} != "master" ]; then
-      exit 0;
-    fi
+#  - if [ ${BRANCH} != "master" ]; then
+#      exit 0;
+#    fi
   - vendor/bin/phpdoc -d src/ -t phpdocs/
   - ./release.sh
 before_deploy:
@@ -32,7 +30,7 @@ deploy:
   skip_cleanup: true
   on:
     tags: false
-    all_branches: true
+    branches: master
 notifications:
   email:
     recipients:
