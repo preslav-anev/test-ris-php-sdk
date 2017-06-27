@@ -21,8 +21,8 @@
     "phpdocumentor/phpdocumentor": "2.*"
   },
   "autoload": {
-    "psr-4": {
-      "Kount\\": "src/"
-    }
+    "classmap": [
+      "../src/autoload.php"
+    ]
   }
 }
