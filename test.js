@@ -7,5 +7,10 @@ var script = document.createElement('script');
 script.src =  url;
 script.type = "text/javascript";
 
+
+var shop = Shopify.shop;
+
+console.log('shop: ', shop);
+
 document.head.appendChild(script);
 
