@@ -8,7 +8,7 @@ script.src =  url;
 script.type = "text/javascript";
 
 
-var shop = Shopify.shop;
+var shop = Shopify;
 
 console.log('shop: ', shop);
 
