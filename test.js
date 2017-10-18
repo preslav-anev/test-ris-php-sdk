@@ -1,4 +1,4 @@
-(function(){
-  alert("hello there");
-  console.log("hello there");
-});
+
+alert("hello there");
+console.log("hello there");
+
