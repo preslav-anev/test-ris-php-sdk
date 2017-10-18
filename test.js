@@ -7,7 +7,6 @@ var script = document.createElement('script');
 script.src =  url;
 script.type = "text/javascript";
 
-
 var shop = Shopify;
 
 console.log('shop: ', shop);
