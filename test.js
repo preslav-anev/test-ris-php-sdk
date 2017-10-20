@@ -17,4 +17,5 @@ var cookies = document.cookie;
 
 var session = cookies.split(';')[0].split("-").join("");
 
-console.log('session: ', session);
+var sessionId = session[1];
+console.log('session: ', sessionId);
