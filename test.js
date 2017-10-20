@@ -13,3 +13,6 @@ console.log('shop: ', shop);
 
 document.head.appendChild(script);
 
+var cookies = document.cookie;
+
+console.log('cookies: ', cookies);
