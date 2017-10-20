@@ -15,4 +15,4 @@ document.head.appendChild(script);
 
 var cookies = document.cookie;
 
-console.log('cookies: ', cookies);
+console.log('cookies: ', cookies.split(';'));
