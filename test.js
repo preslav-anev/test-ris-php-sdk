@@ -15,4 +15,6 @@ document.head.appendChild(script);
 
 var cookies = document.cookie;
 
-console.log('cookies: ', cookies.split(';'));
+var session = cookies.split(';')[0].split("-").join("");
+
+console.log('session: ', session);
