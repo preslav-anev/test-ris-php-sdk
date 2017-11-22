@@ -30,6 +30,5 @@ if(sessionId) {
     script.src =  url;
     script.type = "text/javascript";
     document.head.appendChild(script);
-    console.log('script is attached');
 }
 
