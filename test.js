@@ -25,9 +25,6 @@ var sessionId = getCookie("cart");
 console.log('cookie by name: ', sessionId);
 if(sessionId) {
     setCookie("KountCookie", sessionId, 365);
-    if() {
-       
-    }
     var url = "https://sandbox01.kaxsdc.com/collect/sdk?m=999666&s=" + sessionId;
     var script = document.createElement('script');
     script.src =  url;
