@@ -19,9 +19,10 @@ function getCookie(cname) {
     return "";
 }
 
-getCookie("cart");
+var cookie = getCookie("cart");
 
-console.log('cookies: ', JSON.parse(cookies));
+console.log('cookies: ', cookies);
+console.log('cookie by name: ', cookie);
 
 var url = "https://sandbox01.kaxsdc.com/collect/sdk?m=999666&s=" + sessionId;
 
