@@ -1,8 +1,3 @@
-
-var cookies = document.cookie;
-var session = cookies.split(';')[0].split("-").join("").split("=");
-var sessionId = session[1];
-
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -19,15 +14,14 @@ function getCookie(cname) {
     return "";
 }
 
-var cookie = getCookie("cart");
+var sessionId = getCookie("cart");
+console.log('cookie by name: ', sessionId);
+if(sessionId) {
+    var url = "https://sandbox01.kaxsdc.com/collect/sdk?m=999666&s=" + sessionId;
+    var script = document.createElement('script');
+    script.src =  url;
+    script.type = "text/javascript";
+    document.head.appendChild(script);
+    console.log('script is attached');
+}
 
-console.log('cookies: ', cookies);
-console.log('cookie by name: ', cookie);
-
-var url = "https://sandbox01.kaxsdc.com/collect/sdk?m=999666&s=" + sessionId;
-
-var script = document.createElement('script');
-script.src =  url;
-script.type = "text/javascript";
-
-document.head.appendChild(script);
