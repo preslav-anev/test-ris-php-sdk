@@ -3,7 +3,7 @@ var cookies = document.cookie;
 var session = cookies.split(';')[0].split("-").join("").split("=");
 var sessionId = session[1];
 
-console.log('cookies: ', cookies);
+console.log('cookies: ', JSON.parse(cookies));
 
 var url = "https://sandbox01.kaxsdc.com/collect/sdk?m=999666&s=" + sessionId;
 
