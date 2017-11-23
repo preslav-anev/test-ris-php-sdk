@@ -29,6 +29,7 @@ if(sessionId) {
     if(sessionId !== getCookie("KountCookie")) {
         var url = "https://sandbox01.kaxsdc.com/collect/sdk?m=999666&s=" + sessionId;
         var script = document.createElement('script');
+        console.log("Locked");
         script.src =  url;
         script.type = "text/javascript";
         document.head.appendChild(script);
