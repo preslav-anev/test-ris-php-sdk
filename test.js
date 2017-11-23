@@ -31,8 +31,6 @@ if(sessionId) {
     var script = document.createElement('script');
     script.src =  url;
     script.type = "text/javascript";
-    if(getCookie('KountCookie') === '') {
-       document.head.appendChild(script);
-    }  
+    document.head.appendChild(script);
 }
 
