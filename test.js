@@ -23,6 +23,8 @@ function setCookie(cname, cvalue, exdays) {
 
 var sessionId = getCookie("cart");
 console.log('cookie by name: ', sessionId);
+var shop = Shopify;
+console.log('shop: ' + Shop);
 if(sessionId) {
     setCookie("KountCookie", sessionId, 365);
     var url = "https://sandbox01.kaxsdc.com/collect/sdk?m=999666&s=" + sessionId;
