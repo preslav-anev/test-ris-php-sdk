@@ -26,7 +26,7 @@ console.log('cookie by name: ', sessionId);
 console.log(getCookie("KountCookie"));
 if(sessionId) {
  
-    if(sessionId !== getCookie("KountCookie") {
+    if(sessionId !== getCookie("KountCookie")) {
         var url = "https://sandbox01.kaxsdc.com/collect/sdk?m=999666&s=" + sessionId;
         var script = document.createElement('script');
         script.src =  url;
