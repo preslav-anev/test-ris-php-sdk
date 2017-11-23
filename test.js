@@ -23,13 +23,16 @@ function setCookie(cname, cvalue, exdays) {
 
 var sessionId = getCookie("cart");
 console.log('cookie by name: ', sessionId);
-console.log(sessionId !== getCookie("KountCookie"));
+console.log(getCookie("KountCookie"));
 if(sessionId) {
-    setCookie("KountCookie", sessionId, 365);
-    var url = "https://sandbox01.kaxsdc.com/collect/sdk?m=999666&s=" + sessionId;
-    var script = document.createElement('script');
-    script.src =  url;
-    script.type = "text/javascript";
-    document.head.appendChild(script);
+ 
+    if(sessionId !== getCookie("KountCookie") {
+        var url = "https://sandbox01.kaxsdc.com/collect/sdk?m=999666&s=" + sessionId;
+        var script = document.createElement('script');
+        script.src =  url;
+        script.type = "text/javascript";
+        document.head.appendChild(script);
+        setCookie("KountCookie", sessionId, 365);
+    }
 }
 
